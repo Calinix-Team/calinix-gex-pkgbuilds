@@ -12,7 +12,7 @@ arch=('x86_64')
 url="https://www.github.com/Calinix-Team/${_pkgname}.git"
 license=('GPL3')
 groups=()
-depends=(xfce)
+depends=()
 makedepends=(git)
 checkdepends=()
 optdepends=()
@@ -35,7 +35,9 @@ pkgver() {
 
 package() {
     install -dm755 ${pkgdir}${_destname}
-	cp -r  ${srcdir}/${_pkgname}${_destname}/* ${pkgdir}${_destname}
+	cp -r  ${srcdir}/${_pkgname}${_destname}/.config ${pkgdir}${_destname}/.config
+    cp -r  ${srcdir}/${_pkgname}${_destname}/.local ${pkgdir}${_destname}/.local
+    
 
     install -dm755 ${pkgdir}${_licensedir}${_pkgname}
     install -dm755 ${pkgdir}${_readmedir}${_pkgname}

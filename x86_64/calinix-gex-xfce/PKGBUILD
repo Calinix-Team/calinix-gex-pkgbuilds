@@ -4,7 +4,7 @@ _pkgname=calinix-gex-xfce-git
 _destname="/etc/skel/"
 _licensedir="/usr/share/licenses/${_pkgname}/"
 _readmedir="/usr/share/doc/${_pkgname}/"
-pkgver=1.r47.ddcfadc
+pkgver=1.r48.ddcfadc
 pkgrel=1
 epoch=
 pkgdesc="The default xfce configuration for Gex."
@@ -38,7 +38,6 @@ package() {
 	cp -r  ${srcdir}/${_pkgname}${_destname}/.config ${pkgdir}${_destname}/.config
     cp -r  ${srcdir}/${_pkgname}${_destname}/.local ${pkgdir}${_destname}/.local
     
-
     install -dm755 ${pkgdir}${_licensedir}${_pkgname}
     install -dm755 ${pkgdir}${_readmedir}${_pkgname}
 	install -m644  ${srcdir}/${_pkgname}/LICENSE ${pkgdir}${_licensedir}${_pkgname}

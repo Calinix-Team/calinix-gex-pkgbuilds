@@ -1,6 +1,6 @@
 # Maintainer: Arghya Sarkar <arghyasarkar.nolan@gmail.com>
-pkgname=calinix-iris-git
-_pkgname=calinix-iris-git
+pkgname=calinix-gex-iris-git
+_pkgname=calinix-gex-iris-git
 _destname="/etc/skel/.iris/"
 _licensedir="/usr/share/licenses/${_pkgname}/"
 _readmedir="/usr/share/doc/${_pkgname}/"

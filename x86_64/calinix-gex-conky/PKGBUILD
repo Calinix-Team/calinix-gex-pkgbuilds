@@ -1,5 +1,5 @@
 # Maintainer: Arghya Sarkar <arghyasarkar.nolan@gmail.com>
-pkgname=calinix-conky-git
+pkgname=calinix-gex-conky-git
 _pkgname=calinix-conky-git
 _destname="/etc/skel/.config/conky/"
 _licensedir="/usr/share/licenses/${_pkgname}/"
@@ -7,7 +7,7 @@ _readmedir="/usr/share/doc/${_pkgname}/"
 pkgver=1.r47.ddcfadc
 pkgrel=1
 epoch=
-pkgdesc="The default conky configuration for CalinixOS."
+pkgdesc="The default conky configuration for Calinix Gex."
 arch=('x86_64')
 url="https://www.github.com/Calinix-Team/calinix-conky-git.git"
 license=('GPL3')
@@ -16,8 +16,8 @@ depends=(conky)
 makedepends=(git)
 checkdepends=()
 optdepends=()
-provides=(calinix-conky-git)
-conflicts=()
+provides=(calinix-gex-conky-git)
+conflicts=(calinix-conky-git)
 replaces=()
 backup=()
 options=()
@@ -29,7 +29,7 @@ md5sums=('SKIP')
 validpgpkeys=()
 
 pkgver() {
-	cd "${_pkgname}"
+	cd "calinix-conky-git"
     printf "1.r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
